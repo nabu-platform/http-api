@@ -8,6 +8,6 @@ import java.security.Principal;
  * They all work in the same way, the *-Authenticate header contains the type, a whitespace and a custom challenge
  * The response should be sent in the Authorization or Proxy-Authorization header
  */
-public interface AuthenticationHandler {
+public interface ClientAuthenticationHandler {
 	public String authenticate(Principal principal, String challenge);
 }
