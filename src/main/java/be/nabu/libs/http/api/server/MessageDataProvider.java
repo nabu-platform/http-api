@@ -7,5 +7,5 @@ import be.nabu.libs.resources.api.WritableResource;
 import be.nabu.utils.mime.api.Header;
 
 public interface MessageDataProvider {
-	public <T extends WritableResource & ReadableResource> T newResource(String request, Header...headers) throws IOException;
+	public <T extends WritableResource & ReadableResource> T newResource(String method, String target, double version, Header...headers) throws IOException;
 }
