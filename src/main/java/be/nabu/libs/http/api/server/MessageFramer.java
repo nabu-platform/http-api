@@ -21,6 +21,10 @@ public interface MessageFramer<T> extends Closeable {
 	 */
 	public boolean isDone();
 	/**
+	 * Whether or not the data was considered closed
+	 */
+	public boolean isClosed();
+	/**
 	 * Get the message (only works if isDone() returns true)
 	 */
 	public T getMessage();
