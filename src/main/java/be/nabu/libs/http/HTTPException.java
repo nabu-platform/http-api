@@ -7,7 +7,7 @@ public class HTTPException extends RuntimeException {
 	private int code;
 	
 	public HTTPException(int code) {
-		super();
+		super(HTTPCodes.getMessage(code));
 		this.code = code;
 	}
 
