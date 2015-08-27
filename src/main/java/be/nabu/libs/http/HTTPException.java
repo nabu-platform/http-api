@@ -12,12 +12,12 @@ public class HTTPException extends RuntimeException {
 	}
 
 	public HTTPException(int code, String message, Throwable cause) {
-		super(message, cause);
+		super(message == null ? HTTPCodes.getMessage(code) : message, cause);
 		this.code = code;
 	}
 
 	public HTTPException(int code, String message) {
-		super(message);
+		super(message == null ? HTTPCodes.getMessage(code) : message);
 		this.code = code;
 	}
 
