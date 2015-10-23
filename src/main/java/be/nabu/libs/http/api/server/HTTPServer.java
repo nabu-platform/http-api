@@ -8,4 +8,7 @@ public interface HTTPServer {
 	public EventDispatcher getEventDispatcher();
 	public void start() throws IOException;
 	public void stop();
+	
+	public void setExceptionFormatter(HTTPExceptionFormatter formatter);
+	public HTTPExceptionFormatter getExceptionFormatter();
 }
