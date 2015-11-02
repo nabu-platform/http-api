@@ -9,6 +9,7 @@ import be.nabu.libs.nio.api.MessageProcessorFactory;
 public interface HTTPProcessorFactory extends MessageProcessorFactory<HTTPRequest, HTTPResponse> {
 	public void route(String hostMatch, EventDispatcher eventDispatcher);
 	public void unroute(String hostMatch);
+	public EventDispatcher getDispatcher(String hostMatch);
 	
 	public boolean isProxied();
 	public void setProxied(boolean isProxied);

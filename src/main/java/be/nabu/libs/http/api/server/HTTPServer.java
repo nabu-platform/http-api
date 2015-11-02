@@ -12,6 +12,7 @@ public interface HTTPServer extends Server {
 	
 	public void route(String hostMatch, EventDispatcher eventDispatcher);
 	public void unroute(String hostMatch);
+	public EventDispatcher getDispatcher(String hostMatch);
 	
 	public ExceptionFormatter<HTTPRequest, HTTPResponse> getExceptionFormatter();
 	public void setExceptionFormatter(ExceptionFormatter<HTTPRequest, HTTPResponse> exceptionFormatter);
