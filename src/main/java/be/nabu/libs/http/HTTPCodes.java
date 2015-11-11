@@ -38,6 +38,7 @@ public class HTTPCodes {
 			case 415: return "Unsupported Media Type";
 			case 416: return "Requested Range Not Satisfiable";
 			case 417: return "Expectation Failed";
+			case 426: return "Upgrade Required";
 			case 500: return "Internal Server Error";
 			case 501: return "Not Implemented";
 			case 502: return "Bad Gateway";
