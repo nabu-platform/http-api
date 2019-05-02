@@ -14,6 +14,7 @@ public class HTTPException extends RuntimeException {
 	private Token token;
 	private Device device;
 	private List<String> context = new ArrayList<String>();
+	private String description;
 	
 	public HTTPException(int code) {
 		super(HTTPCodes.getMessage(code));
@@ -28,18 +29,35 @@ public class HTTPException extends RuntimeException {
 		super(message == null ? HTTPCodes.getMessage(code) : message, cause);
 		this.code = code;
 	}
+	public HTTPException(int code, String message, String description, Throwable cause) {
+		this(code, message, cause);
+		this.description = description;
+	}
 	public HTTPException(int code, String message, Throwable cause, Token token) {
 		this(code, message, cause);
 		this.token = token;
+	}
+	public HTTPException(int code, String message, String description, Throwable cause, Token token) {
+		this(code, message, cause, token);
+		this.description = description;
 	}
 
 	public HTTPException(int code, String message) {
 		super(message == null ? HTTPCodes.getMessage(code) : message);
 		this.code = code;
 	}
+	public HTTPException(int code, String message, String description) {
+		this(code, message);
+		this.description = description;
+	}
+	
 	public HTTPException(int code, String message, Token token) {
 		this(code, message);
 		this.token = token;
+	}
+	public HTTPException(int code, String message, String description, Token token) {
+		this(code, message, token);
+		this.description = description;
 	}
 	
 	public HTTPException(int code, Throwable cause) {
@@ -72,4 +90,11 @@ public class HTTPException extends RuntimeException {
 	public void setDevice(Device device) {
 		this.device = device;
 	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
 }
