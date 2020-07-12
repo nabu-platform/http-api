@@ -5,4 +5,5 @@ import be.nabu.utils.mime.api.ModifiablePart;
 public interface HTTPEntity {
 	public ModifiablePart getContent();
 	public double getVersion();
+	public default String getProtocol() { return "HTTP"; };
 }
