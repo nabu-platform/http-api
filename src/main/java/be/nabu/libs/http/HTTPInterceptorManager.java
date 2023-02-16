@@ -14,6 +14,10 @@ public class HTTPInterceptorManager {
 		HTTPInterceptorManager.interceptor.set(interceptor);
 	}
 	
+	public static void unregister() {
+		HTTPInterceptorManager.interceptor.set(null);
+	}
+	
 	public static void unregister(HTTPInterceptor interceptor) {
 		HTTPInterceptorManager.interceptor.set(null);
 	}
