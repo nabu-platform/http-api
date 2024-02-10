@@ -8,6 +8,6 @@ import be.nabu.libs.http.api.HTTPRequest;
 import be.nabu.libs.http.api.HTTPResponse;
 import be.nabu.utils.mime.impl.FormatException;
 
-public interface NIOHTTPClient extends HTTPClient {
+public interface NIOHTTPClient extends TimedHTTPClient {
 	public Future<HTTPResponse> call(HTTPRequest request, boolean secure) throws IOException, FormatException, ParseException;
 }
