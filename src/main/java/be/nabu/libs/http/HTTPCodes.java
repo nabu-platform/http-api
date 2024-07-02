@@ -38,6 +38,8 @@ public class HTTPCodes {
 			case 415: return "Unsupported Media Type";
 			case 416: return "Requested Range Not Satisfiable";
 			case 417: return "Expectation Failed";
+			// webdav
+			case 423: return "Locked";
 			case 426: return "Upgrade Required";
 			case 429: return "Too Many Requests";
 			case 500: return "Internal Server Error";
