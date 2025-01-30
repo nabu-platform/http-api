@@ -21,4 +21,7 @@ import java.util.Map;
 
 public interface HeaderMappingProvider {
 	public Map<String, String> getMappings();
+	public default String getConversationIdMapping() {
+		return null;
+	}
 }
